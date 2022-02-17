@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    nodejs('node-14.18.2') {
-
-    }
-
     stages {
         stage('Build') {
             steps {
@@ -13,7 +9,9 @@ pipeline {
 
             post {
                 always {
-                    junit 'results/test-output/test-output-*.xml'
+                    nodejs('node-14.18.2') {
+
+                    }
                 }
             }
         }
