@@ -3,8 +3,11 @@ pipeline {
 
     stages {
         stage('Build') {
+            nodejs('node-14.18.2') {
+                // some block
             steps {
                 sh 'yarn run cy:open cy:ci'
+            }
             }
 
             post {
