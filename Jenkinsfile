@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Build') {
             steps {
                 sh 'yarn run cy:open cy:ci'
             }
