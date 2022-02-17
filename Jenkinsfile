@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh './yarn run test cy:ci'
+                sh 'yarn run test cy:ci'
             }
 
             post {
