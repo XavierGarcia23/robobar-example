@@ -4,14 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn install cy:open cy:ci'
+                nodejs('node-14.18.2') {
+                    sh 'yarn install cy:ci'
+                }
             }
 
             post {
                 always {
-                    nodejs('node-14.18.2') {
-
-                    }
+                    junit 'build/test-results/test/*.xml'
                 }
             }
         }
