@@ -72,17 +72,17 @@ Feature: Robobar cart
     And user press order button
     Then order is confirmed
 
-  Scenario Outline: user adds several drinks in one line and age
-    Given user opens robobar website
-    When user adds <cola> cola <beer> beer <wine> wine
-    Then total should be €<total>
-    When user press submit button
-    When user enter her age is <age>
-    And user press order button
-    But checkout result is "<expected>"
-    Examples:
-      | cola | beer | wine | age | total | expected |
-      | 1    | 0    | 0    | 10  | 1.25  | pass     |
-      | 0    | 1    | 0    | 10  | 2.00  | fail     |
-      | 0    | 0    | 1    | 21  | 3.00  | pass     |
-      | 1    | 1    | 1    | 22  | 6.25  | pass     |
+  //Scenario Outline: user adds several drinks in one line and age
+  //Given user opens robobar website
+  //When user adds <cola> cola <beer> beer <wine> wine
+  //Then total should be €<total>
+  //When user press submit button
+  //When user enter her age is <age>
+  //And user press order button
+  //But checkout result is "<expected>"
+  //Examples:
+  //  | cola | beer | wine | age | total | expected |
+  //  | 1    | 0    | 0    | 10  | 1.25  | pass     |
+  //  | 0    | 1    | 0    | 10  | 2.00  | fail     |
+  //  | 0    | 0    | 1    | 21  | 3.00  | pass     |
+  //  | 1    | 1    | 1    | 22  | 6.25  | pass     |
