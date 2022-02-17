@@ -82,7 +82,7 @@ Feature: Robobar cart
     But checkout result is "<expected>"
     Examples:
       | cola | beer | wine | age | total | expected |
-      | 1    | 0    | 0    | 10  | 1.25  | pass     |
+      | 1    | 1    | 0    | 10  | 3.25  | fail     |
       | 0    | 1    | 0    | 10  | 2.00  | fail     |
       | 0    | 0    | 1    | 21  | 3.00  | pass     |
       | 1    | 1    | 1    | 22  | 6.25  | pass     |
