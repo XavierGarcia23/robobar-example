@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'yarn run cy:open cy:ci'
+                sh 'yarn install cy:open cy:ci'
             }
 
             post {
